@@ -37,8 +37,6 @@ services:
     container_name: gitlab
     restart: always
     hostname: gitlab.coder369.com
-    ports:
-      - '2200:22'
     volumes:
       - /server/gitlab/conf:/etc/gitlab
       - /server/gitlab/logs:/var/log/gitlab
