@@ -2,6 +2,8 @@
 
 官网地址：https://docs.docker.com/get-docker
 
+![image-20210719165408531](https://cdn.coder369.com/img/blog/image-20210719165408531.png)
+
 安装yum-utils
 
 ```
@@ -32,11 +34,5 @@ systemctl start docker
 
 ```
 systemctl enable docker
-```
-
-通过运行`hello-world` 映像验证 Docker Engine 是否已正确安装。
-
-```
-docker run hello-world
 ```
 
