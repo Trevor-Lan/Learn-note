@@ -29,8 +29,14 @@ tcp-keepalive 300     #防止出现远程主机强迫关闭了一个现有的连
 **运行容器**
 
 ```
-docker run -v /redis/redis.conf:/redis/redis.conf --name redis -d -p 6379:6379 redis redis-server /redis/redis.conf
+docker run -p 6379:6379 --name redis -v /server/redis/redis.conf:/etc/redis/redis.conf  -v /server/redis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
+参数说明：
 
+> -p 6379:6379                                                                把容器内的6379端口映射到宿主机6379端口
+> -v /data/redis/redis.conf:/etc/redis/redis.conf       把宿主机配置好的redis.conf放到容器内的这个位置中
+> -v /data/redis/data:/data                                           把redis持久化的数据在宿主机内显示，做数据备份
+> redis-server /etc/redis/redis.conf                            这个是关键配置，让redis不是无配置启动，而是按照这个redis.conf的配置启动
+> –appendonly yes                                                         redis启动后数据持久化
 
