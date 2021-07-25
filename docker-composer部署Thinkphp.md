@@ -6,9 +6,9 @@
 version: '3'
 
 services:
-  nginx:
+  www:
     image: nginx
-    container_name: nginx2
+    container_name: www
     volumes:
       - /server/fangzhou/nginx/www:/www
       - /server/fangzhou/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
