@@ -2,6 +2,8 @@
 
 
 
+### PHP版本
+
 **php各个版本源码：**
 https://museum.php.net
 
@@ -22,7 +24,17 @@ http://rpms.remirepo.net
 
 
 
-**PHP YUM：**
+### PHP扩展
 
-http://mirror.webtatic.com/yum
+下载pecl
+
+```
+wget http://pear.php.net/go-pear.phar -O go-pear.php
+```
+
+安装pecl
+
+```
+php go-pear.php
+```
 
