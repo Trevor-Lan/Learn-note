@@ -47,7 +47,19 @@ yum install -y php
 **安装扩展**
 
 ```
-yum -y install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-soap curl curl-devel
+yum -y install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-soap curl curl-devel php-devel
+```
+
+**安装fpm**
+
+```
+yum install -y php-fpm
+```
+
+**启动fpm**
+
+```
+php-fpm
 ```
 
 
