@@ -1,62 +1,60 @@
-# docker-compose部署Thinkphp
-
-
+**docker-compose**
 
 ```yml
 version: '3'
 
 services:
   www:
-    image: nginx
+    image: lwqbrell/www:fpm-nginx
     container_name: www
+    privileged: true
     volumes:
-      - /server/fangzhou/nginx/www:/www
-      - /server/fangzhou/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - /docker/www/data:/www
+      - /docker/www/conf.d/default.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - "8080:80"
-    networks:
-      - default
-  php:
-    image: php:fpm
-    container_name: php
-    volumes:
-      - /server/fangzhou/nginx/www:/www
-    networks:
-      - default
+      - "9980:80"
   db:
     image: mysql:5.7
     restart: always
     container_name: mysql57
-    volumes:
-      - /server/fangzhou/mysql5.7/data:/var/lib/mysql
-    networks:
-      - default
     environment:
       MYSQL_ROOT_PASSWORD: ah4gsVFY4cTP   
   phpmyadmin:
-    image: phpmyadmin
+    image: phpmyadmin:latest
     restart: always
-    depends_on:
-      - db
     container_name: phpmyadmin
     ports:
-      - "8000:80"
-    networks:
-      - default
+      - "9990:80"
     external_links:
       - mysql57
   redis:
     image: redis:latest
     restart: always
     container_name: redis
-    volumes:
-      - /server/fangzhou/redis/data:/data
-    command: [ "redis-server", "/server/fangzhou/redis/conf/redis.conf" ]
-    networks:
-      - default
-networks:
-  default:
-    external: true
-    name: net_www
+```
+
+ **default.conf**
+
+```nginx
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    location / {
+        root   /www/public;
+        index  index.html index.php index.htm;
+        if (!-e $request_filename){
+          rewrite ^(.*)$ /index.php?s=$1 last; break;
+        }
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  /www/public/$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
 ```
 
