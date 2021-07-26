@@ -62,7 +62,21 @@ yum install -y php-fpm
 php-fpm
 ```
 
+**查看9000端口是否在监听**
 
+```
+netstat -tulnp
+```
+
+>  注：如果出现
+>
+> bash: netstat: command not found
+>
+> 则：
+>
+> ```
+> yum install -y net-tools
+> ```
 
 
 
