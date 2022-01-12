@@ -1,0 +1,78 @@
+- 数据结构
+  - [SplDoublyLinkedList](https://www.php.net/manual/zh/class.spldoublylinkedlist.php) — The SplDoublyLinkedList class
+  - [SplStack](https://www.php.net/manual/zh/class.splstack.php) — SplStack 类
+  - [SplQueue](https://www.php.net/manual/zh/class.splqueue.php) — SplQueue 类
+  - [SplHeap](https://www.php.net/manual/zh/class.splheap.php) — The SplHeap class
+  - [SplMaxHeap](https://www.php.net/manual/zh/class.splmaxheap.php) — The SplMaxHeap class
+  - [SplMinHeap](https://www.php.net/manual/zh/class.splminheap.php) — The SplMinHeap class
+  - [SplPriorityQueue](https://www.php.net/manual/zh/class.splpriorityqueue.php) — The SplPriorityQueue class
+  - [SplFixedArray](https://www.php.net/manual/zh/class.splfixedarray.php) — The SplFixedArray class
+  - [SplObjectStorage](https://www.php.net/manual/zh/class.splobjectstorage.php) — The SplObjectStorage class
+- 迭代器
+  - [AppendIterator](https://www.php.net/manual/zh/class.appenditerator.php) — AppendIterator 类
+  - [ArrayIterator](https://www.php.net/manual/zh/class.arrayiterator.php) — ArrayIterator 类
+  - [CachingIterator](https://www.php.net/manual/zh/class.cachingiterator.php) — The CachingIterator class
+  - [CallbackFilterIterator](https://www.php.net/manual/zh/class.callbackfilteriterator.php) — The CallbackFilterIterator class
+  - [DirectoryIterator](https://www.php.net/manual/zh/class.directoryiterator.php) — The DirectoryIterator class
+  - [EmptyIterator](https://www.php.net/manual/zh/class.emptyiterator.php) — The EmptyIterator class
+  - [FilesystemIterator](https://www.php.net/manual/zh/class.filesystemiterator.php) — The FilesystemIterator class
+  - [FilterIterator](https://www.php.net/manual/zh/class.filteriterator.php) — FilterIterator 类
+  - [GlobIterator](https://www.php.net/manual/zh/class.globiterator.php) — GlobIterator 类
+  - [InfiniteIterator](https://www.php.net/manual/zh/class.infiniteiterator.php) — The InfiniteIterator class
+  - [IteratorIterator](https://www.php.net/manual/zh/class.iteratoriterator.php) — The IteratorIterator class
+  - [LimitIterator](https://www.php.net/manual/zh/class.limititerator.php) — LimitIterator 类
+  - [MultipleIterator](https://www.php.net/manual/zh/class.multipleiterator.php) — The MultipleIterator class
+  - [NoRewindIterator](https://www.php.net/manual/zh/class.norewinditerator.php) — The NoRewindIterator class
+  - [ParentIterator](https://www.php.net/manual/zh/class.parentiterator.php) — The ParentIterator class
+  - [RecursiveArrayIterator](https://www.php.net/manual/zh/class.recursivearrayiterator.php) — The RecursiveArrayIterator class
+  - [RecursiveCachingIterator](https://www.php.net/manual/zh/class.recursivecachingiterator.php) — The RecursiveCachingIterator class
+  - [RecursiveCallbackFilterIterator](https://www.php.net/manual/zh/class.recursivecallbackfilteriterator.php) — The RecursiveCallbackFilterIterator class
+  - [RecursiveDirectoryIterator](https://www.php.net/manual/zh/class.recursivedirectoryiterator.php) — The RecursiveDirectoryIterator class
+  - [RecursiveFilterIterator](https://www.php.net/manual/zh/class.recursivefilteriterator.php) — The RecursiveFilterIterator class
+  - [RecursiveIteratorIterator](https://www.php.net/manual/zh/class.recursiveiteratoriterator.php) — The RecursiveIteratorIterator class
+  - [RecursiveRegexIterator](https://www.php.net/manual/zh/class.recursiveregexiterator.php) — The RecursiveRegexIterator class
+  - [RecursiveTreeIterator](https://www.php.net/manual/zh/class.recursivetreeiterator.php) — The RecursiveTreeIterator class
+  - [RegexIterator](https://www.php.net/manual/zh/class.regexiterator.php) — The RegexIterator class
+- 接口
+  - [Countable](https://www.php.net/manual/zh/class.countable.php) — Countable 接口
+  - [OuterIterator](https://www.php.net/manual/zh/class.outeriterator.php) — The OuterIterator interface
+  - [RecursiveIterator](https://www.php.net/manual/zh/class.recursiveiterator.php) — The RecursiveIterator interface
+  - [SeekableIterator](https://www.php.net/manual/zh/class.seekableiterator.php) — The SeekableIterator interface
+- 异常
+  - [BadFunctionCallException](https://www.php.net/manual/zh/class.badfunctioncallexception.php) — The BadFunctionCallException class
+  - [BadMethodCallException](https://www.php.net/manual/zh/class.badmethodcallexception.php) — BadMethodCallException 类
+  - [DomainException](https://www.php.net/manual/zh/class.domainexception.php) — The DomainException class
+  - [InvalidArgumentException](https://www.php.net/manual/zh/class.invalidargumentexception.php) — The InvalidArgumentException class
+  - [LengthException](https://www.php.net/manual/zh/class.lengthexception.php) — The LengthException class
+  - [LogicException](https://www.php.net/manual/zh/class.logicexception.php) — The LogicException class
+  - [OutOfBoundsException](https://www.php.net/manual/zh/class.outofboundsexception.php) — The OutOfBoundsException class
+  - [OutOfRangeException](https://www.php.net/manual/zh/class.outofrangeexception.php) — The OutOfRangeException class
+  - [OverflowException](https://www.php.net/manual/zh/class.overflowexception.php) — The OverflowException class
+  - [RangeException](https://www.php.net/manual/zh/class.rangeexception.php) — The RangeException class
+  - [RuntimeException](https://www.php.net/manual/zh/class.runtimeexception.php) — The RuntimeException class
+  - [UnderflowException](https://www.php.net/manual/zh/class.underflowexception.php) — The UnderflowException class
+  - [UnexpectedValueException](https://www.php.net/manual/zh/class.unexpectedvalueexception.php) — The UnexpectedValueException class
+- SPL 函数
+  - [class_implements](https://www.php.net/manual/zh/function.class-implements.php) — 返回指定的类实现的所有接口。
+  - [class_parents](https://www.php.net/manual/zh/function.class-parents.php) — 返回指定类的父类。
+  - [class_uses](https://www.php.net/manual/zh/function.class-uses.php) — Return the traits used by the given class
+  - [iterator_apply](https://www.php.net/manual/zh/function.iterator-apply.php) — 为迭代器中每个元素调用一个用户自定义函数
+  - [iterator_count](https://www.php.net/manual/zh/function.iterator-count.php) — 计算迭代器中元素的个数
+  - [iterator_to_array](https://www.php.net/manual/zh/function.iterator-to-array.php) — 将迭代器中的元素拷贝到数组
+  - [spl_autoload_call](https://www.php.net/manual/zh/function.spl-autoload-call.php) — 尝试调用所有已注册的 __autoload() 函数来装载请求类
+  - [spl_autoload_extensions](https://www.php.net/manual/zh/function.spl-autoload-extensions.php) — 注册并返回 spl_autoload 函数使用的默认文件扩展名
+  - [spl_autoload_functions](https://www.php.net/manual/zh/function.spl-autoload-functions.php) — 返回所有已注册的 __autoload() 函数
+  - [spl_autoload_register](https://www.php.net/manual/zh/function.spl-autoload-register.php) — 注册给定的函数作为 __autoload 的实现
+  - [spl_autoload_unregister](https://www.php.net/manual/zh/function.spl-autoload-unregister.php) — 注销已注册的 __autoload() 函数
+  - [spl_autoload](https://www.php.net/manual/zh/function.spl-autoload.php) — __autoload()函数的默认实现
+  - [spl_classes](https://www.php.net/manual/zh/function.spl-classes.php) — 返回所有可用的SPL类
+  - [spl_object_hash](https://www.php.net/manual/zh/function.spl-object-hash.php) — 返回指定对象的hash id
+  - [spl_object_id](https://www.php.net/manual/zh/function.spl-object-id.php) — Return the integer object handle for given object
+- 文件处理
+  - [SplFileInfo](https://www.php.net/manual/zh/class.splfileinfo.php) — The SplFileInfo class
+  - [SplFileObject](https://www.php.net/manual/zh/class.splfileobject.php) — SplFileObject 类
+  - [SplTempFileObject](https://www.php.net/manual/zh/class.spltempfileobject.php) — The SplTempFileObject class
+- 各种类及接口
+  - [ArrayObject](https://www.php.net/manual/zh/class.arrayobject.php) — The ArrayObject class
+  - [SplObserver](https://www.php.net/manual/zh/class.splobserver.php) — The SplObserver interface
+  - [SplSubject](https://www.php.net/manual/zh/class.splsubject.php) — The SplSubject interface

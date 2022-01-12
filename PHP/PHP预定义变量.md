@@ -1,0 +1,14 @@
+- [$GLOBALS](https://www.php.net/manual/zh/reserved.variables.globals.php) — 引用全局作用域中可用的全部变量
+- [$_SERVER](https://www.php.net/manual/zh/reserved.variables.server.php) — 服务器和执行环境信息
+- [$_GET](https://www.php.net/manual/zh/reserved.variables.get.php) — HTTP GET 变量
+- [$_POST](https://www.php.net/manual/zh/reserved.variables.post.php) — HTTP POST 变量
+- [$_FILES](https://www.php.net/manual/zh/reserved.variables.files.php) — HTTP 文件上传变量
+- [$_REQUEST](https://www.php.net/manual/zh/reserved.variables.request.php) — HTTP Request 变量
+- [$_SESSION](https://www.php.net/manual/zh/reserved.variables.session.php) — Session 变量
+- [$_ENV](https://www.php.net/manual/zh/reserved.variables.environment.php) — 环境变量
+- [$_COOKIE](https://www.php.net/manual/zh/reserved.variables.cookies.php) — HTTP Cookies
+- [$php_errormsg](https://www.php.net/manual/zh/reserved.variables.phperrormsg.php) — 前一个错误信息
+- [$http_response_header](https://www.php.net/manual/zh/reserved.variables.httpresponseheader.php) — HTTP 响应头
+- [$argc](https://www.php.net/manual/zh/reserved.variables.argc.php) — 传递给脚本的参数数目
+- [$argv](https://www.php.net/manual/zh/reserved.variables.argv.php) — 传递给脚本的参数数组
+
