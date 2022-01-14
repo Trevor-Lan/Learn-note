@@ -98,9 +98,74 @@ $b = [];
 
 ## Callback与Callable
 
- 可以接受用户自定义的回调函数作为参数。回调函数不止可以是简单函数，还可以是对象的方法，包括静态类方法。
+### 传递回调函数
 
-> call_user_func(callable $callback, mixed ...$args): mixed
+> 不仅可以使用普通的用户自定义函数，也接受 [匿名函数](https://www.php.net/manual/zh/functions.anonymous.php) 和 [箭头函数](https://www.php.net/manual/zh/functions.arrow.php)。
+
+**自定义函数**
+
+```php
+function add(int $num1, int $num2): int
+{
+    return $num1 + $num2;
+}
+call_user_func('add',1,2);  // 或者 call_user_func('add',...[1,2]);
+```
+
+**匿名函数**
+
+```php
+$add = function (int $num1, int $num2): int {
+    return $num1 + $num2;
+};
+call_user_func($add, 1, 2);
+```
+
+**箭头函数**
+
+```php
+$add = fn(int $num1, int $num2) => $num1 + $num2;
+call_user_func($add, 1, 2);
+```
+
+### 传递对象
+
+下标 为 0 的位置传递object，下标 1 包含方法名。 
+
+```php
+class Person
+{
+    public static function eat()
+    {
+        echo 'eating';
+    }
+    public function program()
+    {
+        echo 'programing';
+    }
+}
+$person = new Person();
+call_user_func([$person, 'program']);
+```
+
+### 传递静态方法
+
+下标为 0 的位置传递类名 ，或者传递 `'ClassName::methodName'`。
+
+```php
+class Person
+{
+    public static function eat()
+    {
+        echo 'eating';
+    }
+    public function program()
+    {
+        echo 'programing';
+    }
+}
+call_user_func(['Person', 'eat']);  // 或者 call_user_func('Person::eat');
+```
 
 
 
