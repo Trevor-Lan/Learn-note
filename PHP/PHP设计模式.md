@@ -11,23 +11,24 @@
 > - 构造方法声明为私有
 
 ```php
-class Database{
-    
-    protected $db;
-    
-    private function __construct(){
-        
+class Database
+{
+
+    private static $db;
+
+    private function __construct()
+    {
+
     }
-    
-    static function getInstence(){
-        if(self::$db){
-            return self::$db;
-        }else{
+
+    static function getInstance(): Database
+    {
+        if (!self::$db) {
             self::$db = new self();
-            return self::$db;
         }
+        return self::$db;
     }
-} 
+}
 ```
 
 
@@ -37,15 +38,23 @@ class Database{
 > - 全局共享和交换对象
 
 ```php
-class Register{
-    protected static $objs
-        
-    static function set($alias,$obj){
-        self::$objects[$alias] = $obj;
+class Register
+{
+    protected static $object;
+
+    static function set($alis, $obj)
+    {
+        self::$object[$alis] = $obj;
     }
-    
-    static _unset($alias){
-        unset(self::$objs[$alias]);
+
+    static function get($alis)
+    {
+        return self::$object[$alis];
+    }
+
+    static function unset($alis)
+    {
+        unset(self::$object[$alis]);
     }
 }
 ```
