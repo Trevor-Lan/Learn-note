@@ -124,9 +124,9 @@ Register::set(Person::class, $person);
 
 > - 将不同的函数接口封装成统一的API，比如：
 >
-> 数据库适配器：mysql、mysqli、pdo
+> - 数据库适配器：mysql、mysqli、pdo
 >
-> 缓存适配器：file、redis、memcache
+> - 缓存适配器：file、redis、memcache
 
 ```php
 interface DatabaseInterface
@@ -205,9 +205,7 @@ class DiyPDO implements DatabaseInterface
 
 ## 5 策略模式
 
-> - 将一组特定的行为和算法封装成类，以适应某些特定的上下文环境，比如：
->
-> - 比如首页根据不同活动来展示不同的广告。
+> - 将一组特定的行为和算法封装成类，以适应某些特定的上下文环境，比如首页根据不同活动来展示不同的广告。
 
 ```php
 /**
@@ -279,7 +277,7 @@ $system->index();
 
 ## 6 数据对象映射模式（ORM）
 
-> - 将对象和数据存储映射起来，堆一个对象的操作会映射为堆数据存储的操作
+> - 将对象和数据存储映射起来，对一个对象的操作会映射为堆数据存储的操作
 
 ```php
 class UserModel
