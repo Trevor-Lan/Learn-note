@@ -1,6 +1,20 @@
-# Docker环境中安装PHP扩展
+## 方式1
+
+PHP容器中安装扩展
+
+```
+docker-php-ext-install 扩展名  
+```
+
+例如
+
+```
+docker-php-ext-install pcntl  
+```
 
 
+
+## 方式2
 
 安装redis扩展
 
