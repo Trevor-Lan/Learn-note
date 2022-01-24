@@ -1,0 +1,51 @@
+- [checkdate](https://www.php.net/manual/zh/function.checkdate.php) — 验证一个格里高里日期
+- [date_add](https://www.php.net/manual/zh/function.date-add.php) — 别名 DateTime::add
+- [date_create_from_format](https://www.php.net/manual/zh/function.date-create-from-format.php) — 别名 DateTime::createFromFormat
+- [date_create_immutable_from_format](https://www.php.net/manual/zh/function.date-create-immutable-from-format.php) — 别名 DateTimeImmutable::createFromFormat
+- [date_create_immutable](https://www.php.net/manual/zh/function.date-create-immutable.php) — 别名 DateTimeImmutable::__construct
+- [date_create](https://www.php.net/manual/zh/function.date-create.php) — 别名 DateTime::__construct
+- [date_date_set](https://www.php.net/manual/zh/function.date-date-set.php) — 别名 DateTime::setDate
+- [date_default_timezone_get](https://www.php.net/manual/zh/function.date-default-timezone-get.php) — 取得一个脚本中所有日期时间函数所使用的默认时区
+- [date_default_timezone_set](https://www.php.net/manual/zh/function.date-default-timezone-set.php) — 设定用于一个脚本中所有日期时间函数的默认时区
+- [date_diff](https://www.php.net/manual/zh/function.date-diff.php) — 别名 DateTime::diff
+- [date_format](https://www.php.net/manual/zh/function.date-format.php) — 别名 DateTime::format
+- [date_get_last_errors](https://www.php.net/manual/zh/function.date-get-last-errors.php) — 别名 DateTime::getLastErrors
+- [date_interval_create_from_date_string](https://www.php.net/manual/zh/function.date-interval-create-from-date-string.php) — 别名 DateInterval::createFromDateString
+- [date_interval_format](https://www.php.net/manual/zh/function.date-interval-format.php) — 别名 DateInterval::format
+- [date_isodate_set](https://www.php.net/manual/zh/function.date-isodate-set.php) — 别名 DateTime::setISODate
+- [date_modify](https://www.php.net/manual/zh/function.date-modify.php) — 别名 DateTime::modify
+- [date_offset_get](https://www.php.net/manual/zh/function.date-offset-get.php) — 别名 DateTime::getOffset
+- [date_parse_from_format](https://www.php.net/manual/zh/function.date-parse-from-format.php) — Get info about given date formatted according to the specified format
+- [date_parse](https://www.php.net/manual/zh/function.date-parse.php) — 返回指定日期/时间的详细信息的关联数组
+- [date_sub](https://www.php.net/manual/zh/function.date-sub.php) — 别名 DateTime::sub
+- [date_sun_info](https://www.php.net/manual/zh/function.date-sun-info.php) — Returns an array with information about sunset/sunrise and twilight begin/end
+- [date_sunrise](https://www.php.net/manual/zh/function.date-sunrise.php) — 返回给定的日期与地点的日出时间
+- [date_sunset](https://www.php.net/manual/zh/function.date-sunset.php) — 返回给定的日期与地点的日落时间
+- [date_time_set](https://www.php.net/manual/zh/function.date-time-set.php) — 别名 DateTime::setTime
+- [date_timestamp_get](https://www.php.net/manual/zh/function.date-timestamp-get.php) — 别名 DateTime::getTimestamp
+- [date_timestamp_set](https://www.php.net/manual/zh/function.date-timestamp-set.php) — 别名 DateTime::setTimestamp
+- [date_timezone_get](https://www.php.net/manual/zh/function.date-timezone-get.php) — 别名 DateTime::getTimezone
+- [date_timezone_set](https://www.php.net/manual/zh/function.date-timezone-set.php) — 别名 DateTime::setTimezone
+- [date](https://www.php.net/manual/zh/function.date.php) — 格式化一个本地时间／日期
+- [getdate](https://www.php.net/manual/zh/function.getdate.php) — 取得日期／时间信息
+- [gettimeofday](https://www.php.net/manual/zh/function.gettimeofday.php) — 取得当前时间
+- [gmdate](https://www.php.net/manual/zh/function.gmdate.php) — 格式化一个 GMT/UTC 日期／时间
+- [gmmktime](https://www.php.net/manual/zh/function.gmmktime.php) — 取得 GMT 日期的 UNIX 时间戳
+- [gmstrftime](https://www.php.net/manual/zh/function.gmstrftime.php) — 根据区域设置格式化 GMT/UTC 时间／日期
+- [idate](https://www.php.net/manual/zh/function.idate.php) — 将本地时间日期格式化为整数
+- [localtime](https://www.php.net/manual/zh/function.localtime.php) — 取得本地时间
+- [microtime](https://www.php.net/manual/zh/function.microtime.php) — 返回当前 Unix 时间戳和微秒数
+- [mktime](https://www.php.net/manual/zh/function.mktime.php) — 取得一个日期的 Unix 时间戳
+- [strftime](https://www.php.net/manual/zh/function.strftime.php) — 根据区域设置格式化本地时间／日期
+- [strptime](https://www.php.net/manual/zh/function.strptime.php) — 解析由 strftime 生成的日期／时间
+- [strtotime](https://www.php.net/manual/zh/function.strtotime.php) — 将任何字符串的日期时间描述解析为 Unix 时间戳
+- [time](https://www.php.net/manual/zh/function.time.php) — 返回当前的 Unix 时间戳
+- [timezone_abbreviations_list](https://www.php.net/manual/zh/function.timezone-abbreviations-list.php) — 别名 DateTimeZone::listAbbreviations
+- [timezone_identifiers_list](https://www.php.net/manual/zh/function.timezone-identifiers-list.php) — 别名 DateTimeZone::listIdentifiers
+- [timezone_location_get](https://www.php.net/manual/zh/function.timezone-location-get.php) — 别名 DateTimeZone::getLocation
+- [timezone_name_from_abbr](https://www.php.net/manual/zh/function.timezone-name-from-abbr.php) — Returns the timezone name from abbreviation
+- [timezone_name_get](https://www.php.net/manual/zh/function.timezone-name-get.php) — 别名 DateTimeZone::getName
+- [timezone_offset_get](https://www.php.net/manual/zh/function.timezone-offset-get.php) — 别名 DateTimeZone::getOffset
+- [timezone_open](https://www.php.net/manual/zh/function.timezone-open.php) — 别名 DateTimeZone::__construct
+- [timezone_transitions_get](https://www.php.net/manual/zh/function.timezone-transitions-get.php) — 别名 DateTimeZone::getTransitions
+- [timezone_version_get](https://www.php.net/manual/zh/function.timezone-version-get.php) — 获取 timezonedb 的版本

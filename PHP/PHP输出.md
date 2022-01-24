@@ -1,0 +1,17 @@
+- [flush](https://www.php.net/manual/zh/function.flush.php) — 刷新输出缓冲
+- [ob_clean](https://www.php.net/manual/zh/function.ob-clean.php) — 清空（擦掉）输出缓冲区
+- [ob_end_clean](https://www.php.net/manual/zh/function.ob-end-clean.php) — 清空（擦除）缓冲区并关闭输出缓冲
+- [ob_end_flush](https://www.php.net/manual/zh/function.ob-end-flush.php) — 冲刷出（送出）输出缓冲区内容并关闭缓冲
+- [ob_flush](https://www.php.net/manual/zh/function.ob-flush.php) — 冲刷出（送出）输出缓冲区中的内容
+- [ob_get_clean](https://www.php.net/manual/zh/function.ob-get-clean.php) — 得到当前缓冲区的内容并删除当前输出缓。
+- [ob_get_contents](https://www.php.net/manual/zh/function.ob-get-contents.php) — 返回输出缓冲区的内容
+- [ob_get_flush](https://www.php.net/manual/zh/function.ob-get-flush.php) — 刷出（送出）缓冲区内容，以字符串形式返回内容，并关闭输出缓冲区。
+- [ob_get_length](https://www.php.net/manual/zh/function.ob-get-length.php) — 返回输出缓冲区内容的长度
+- [ob_get_level](https://www.php.net/manual/zh/function.ob-get-level.php) — 返回输出缓冲机制的嵌套级别
+- [ob_get_status](https://www.php.net/manual/zh/function.ob-get-status.php) — 得到所有输出缓冲区的状态
+- [ob_gzhandler](https://www.php.net/manual/zh/function.ob-gzhandler.php) — 在ob_start中使用的用来压缩输出缓冲区中内容的回调函数。ob_start callback function to gzip output buffer
+- [ob_implicit_flush](https://www.php.net/manual/zh/function.ob-implicit-flush.php) — 打开/关闭绝对刷送
+- [ob_list_handlers](https://www.php.net/manual/zh/function.ob-list-handlers.php) — 列出所有使用中的输出处理程序。
+- [ob_start](https://www.php.net/manual/zh/function.ob-start.php) — 打开输出控制缓冲
+- [output_add_rewrite_var](https://www.php.net/manual/zh/function.output-add-rewrite-var.php) — 添加URL重写器的值（Add URL rewriter values）
+- [output_reset_rewrite_vars](https://www.php.net/manual/zh/function.output-reset-rewrite-vars.php) — 重设URL重写器的值（Reset URL rewriter values）

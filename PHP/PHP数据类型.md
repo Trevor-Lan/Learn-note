@@ -5,10 +5,11 @@
 **注：以下情况的布尔值都为false**
 
 > 布尔值为false
-> 整型值 0
-> 浮点型值 0.0或-0.0
-> 空字符串或字符串 "0"
+> 空字符串
 > 空数组
+> 整型值 0
+> 浮点型值 0.0
+> 字符串 "0"
 > NULL
 
 
@@ -38,6 +39,8 @@ $d = 1_234.567; // 从 PHP 7.4.0 开始支持
 ?>
 ```
 
+> 浮点类型不能用于精确的数学运算
+
 
 
 ## 字符（String）
@@ -59,6 +62,20 @@ $d = 1_234.567; // 从 PHP 7.4.0 开始支持
 $a = array();
 $b = [];
 ```
+
+超全局数组
+
+- [$GLOBALS](https://www.php.net/manual/zh/reserved.variables.globals.php)
+- [$_SERVER](https://www.php.net/manual/zh/reserved.variables.server.php)
+- [$_GET](https://www.php.net/manual/zh/reserved.variables.get.php)
+- [$_POST](https://www.php.net/manual/zh/reserved.variables.post.php)
+- [$_FILES](https://www.php.net/manual/zh/reserved.variables.files.php)
+- [$_COOKIE](https://www.php.net/manual/zh/reserved.variables.cookies.php)
+- [$_SESSION](https://www.php.net/manual/zh/reserved.variables.session.php)
+- [$_REQUEST](https://www.php.net/manual/zh/reserved.variables.request.php)
+- [$_ENV](https://www.php.net/manual/zh/reserved.variables.environment.php)
+
+
 
 
 
@@ -178,3 +195,4 @@ call_user_func(['Person', 'eat']);  // 或者 call_user_func('Person::eat');
 - (array) - 转换为数组 array
 - (object) - 转换为对象 object
 - (unset) - 转换为 NULL
+

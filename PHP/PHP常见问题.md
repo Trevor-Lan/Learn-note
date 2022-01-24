@@ -113,3 +113,18 @@ echo $str;
 ?>
 ```
 
+## 打印方式
+
+print()
+
+printf()
+
+print_r()
+
+echo
+
+sprinttf()
+
+var_dump()
+
+var_export()

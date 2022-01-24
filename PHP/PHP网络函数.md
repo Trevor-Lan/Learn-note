@@ -1,0 +1,34 @@
+- [checkdnsrr](https://www.php.net/manual/zh/function.checkdnsrr.php) — 给指定的主机（域名）或者IP地址做DNS通信检查
+- [closelog](https://www.php.net/manual/zh/function.closelog.php) — 关闭系统日志链接
+- [dns_check_record](https://www.php.net/manual/zh/function.dns-check-record.php) — 别名 checkdnsrr
+- [dns_get_mx](https://www.php.net/manual/zh/function.dns-get-mx.php) — 别名 getmxrr
+- [dns_get_record](https://www.php.net/manual/zh/function.dns-get-record.php) — 获取指定主机的DNS记录
+- [fsockopen](https://www.php.net/manual/zh/function.fsockopen.php) — 打开一个网络连接或者一个Unix套接字连接
+- [gethostbyaddr](https://www.php.net/manual/zh/function.gethostbyaddr.php) — 获取指定的IP地址对应的主机名
+- [gethostbyname](https://www.php.net/manual/zh/function.gethostbyname.php) — 返回主机名对应的 IPv4地址。
+- [gethostbynamel](https://www.php.net/manual/zh/function.gethostbynamel.php) — 获取互联网主机名对应的 IPv4 地址列表
+- [gethostname](https://www.php.net/manual/zh/function.gethostname.php) — 获取主机名
+- [getmxrr](https://www.php.net/manual/zh/function.getmxrr.php) — 获取互联网主机名对应的 MX 记录
+- [getprotobyname](https://www.php.net/manual/zh/function.getprotobyname.php) — Get protocol number associated with protocol name
+- [getprotobynumber](https://www.php.net/manual/zh/function.getprotobynumber.php) — Get protocol name associated with protocol number
+- [getservbyname](https://www.php.net/manual/zh/function.getservbyname.php) — 获取互联网服务协议对应的端口
+- [getservbyport](https://www.php.net/manual/zh/function.getservbyport.php) — Get Internet service which corresponds to port and protocol
+- [header_register_callback](https://www.php.net/manual/zh/function.header-register-callback.php) — 调用一个 header 函数
+- [header_remove](https://www.php.net/manual/zh/function.header-remove.php) — 删除之前设置的 HTTP 头
+- [header](https://www.php.net/manual/zh/function.header.php) — 发送原生 HTTP 头
+- [headers_list](https://www.php.net/manual/zh/function.headers-list.php) — 返回已发送的 HTTP 响应头（或准备发送的）
+- [headers_sent](https://www.php.net/manual/zh/function.headers-sent.php) — 检测 HTTP 头是否已经发送
+- [http_response_code](https://www.php.net/manual/zh/function.http-response-code.php) — 获取/设置响应的 HTTP 状态码
+- [inet_ntop](https://www.php.net/manual/zh/function.inet-ntop.php) — Converts a packed internet address to a human readable representation
+- [inet_pton](https://www.php.net/manual/zh/function.inet-pton.php) — Converts a human readable IP address to its packed in_addr representation
+- [ip2long](https://www.php.net/manual/zh/function.ip2long.php) — 将 IPV4 的字符串互联网协议转换成长整型数字
+- [long2ip](https://www.php.net/manual/zh/function.long2ip.php) — 将长整型转化为字符串形式带点的互联网标准格式地址（IPV4）
+- [net_get_interfaces](https://www.php.net/manual/zh/function.net-get-interfaces.php) — 获取网络接口
+- [openlog](https://www.php.net/manual/zh/function.openlog.php) — Open connection to system logger
+- [pfsockopen](https://www.php.net/manual/zh/function.pfsockopen.php) — 打开一个持久的网络连接或者Unix套接字连接。
+- [setcookie](https://www.php.net/manual/zh/function.setcookie.php) — 发送 Cookie
+- [setrawcookie](https://www.php.net/manual/zh/function.setrawcookie.php) — 发送未经 URL 编码的 cookie
+- [socket_get_status](https://www.php.net/manual/zh/function.socket-get-status.php) — 别名 stream_get_meta_data
+- [socket_set_blocking](https://www.php.net/manual/zh/function.socket-set-blocking.php) — 别名 stream_set_blocking
+- [socket_set_timeout](https://www.php.net/manual/zh/function.socket-set-timeout.php) — 别名 stream_set_timeout
+- [syslog](https://www.php.net/manual/zh/function.syslog.php) — Generate a system log message

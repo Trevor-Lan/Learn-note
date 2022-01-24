@@ -1,3 +1,47 @@
+## 字符串的定义方式
+
+**单引号**
+
+1. 不能解析变量
+2. 不能解析转义字符，只能解析单引号和反斜线本身
+3. 变量或字符串可以使用 . 连接
+
+**双引号**
+
+1. 可以解析变量
+2. 可以解析所有转义字符
+3. 变量或字符串可以使用 . 连接
+
+**newdoc和heredoc**
+
+1. newdoc类似单引号
+
+```php
+<?php
+    
+$a = <<<'EOF'
+hello world
+EOF;
+
+```
+
+2. heredoc类似双引号
+
+```php
+<?php
+    
+$a = <<<EOF
+hello world
+EOF;
+
+```
+
+3. 常用于处理大文本
+
+> 注：因为单引号不解析变量，所以单引号的解析效率要高于双引号
+
+
+
 ## 常用
 
 - [addcslashes](https://www.php.net/manual/zh/function.addcslashes.php) — 以 C 语言风格使用反斜线转义字符串中的字符

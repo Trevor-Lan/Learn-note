@@ -1,3 +1,10 @@
+## 命令行变量
+
+- [$argc](https://www.php.net/manual/zh/reserved.variables.argc.php) — 传递给脚本的参数数目
+- [$argv](https://www.php.net/manual/zh/reserved.variables.argv.php) — 传递给脚本的参数数组
+
+
+
 ## 常用
 
  读取一行
