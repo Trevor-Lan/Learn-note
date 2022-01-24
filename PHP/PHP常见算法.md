@@ -16,7 +16,35 @@
 
 冒泡排序
 
+```php
+<?php
+    
+function bubbling(array $array): array
+{
+    $count = count($array);
+    if ($count <= 1) {
+        return $array;
+    } else {
+        for ($i = 0; $i < $count; $i++) {
+            for ($j = 0; $j < $count - $i; $j++) {
+                if ($array[$j] < $array[$j + 1]) {
+                    $tmp = $array[$j];
+                    $array[$j] = $array[$j + 1];
+                    $array[$j + 1] = $tmp;
+                }
+            }
+        }
+    }
+    return $array;
+}
+
+```
+
+
+
 插入排序
+
+
 
 希尔排序
 
