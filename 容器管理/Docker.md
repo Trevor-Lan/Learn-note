@@ -38,8 +38,269 @@ sudo systemctl restart docker
 ```
 ## 架构
 ## 仓库
+
+### Docker官方
+
+### Harbor
+
+### 云服务仓库
+
 ## 镜像
+
+### 搜索
+
+```shell
+Usage:  docker search [OPTIONS] TERM
+
+Search the Docker Hub for images
+
+Options:
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print search using a Go template
+      --limit int       Max number of search results (default 25)
+      --no-trunc        Don't truncate output
+```
+
+### 拉取
+
+```shell
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Pull an image or a repository from a registry
+
+Options:
+  -a, --all-tags                Download all tagged images in the repository
+      --disable-content-trust   Skip image verification (default true)
+      --platform string         Set platform if server is multi-platform
+                                capable
+  -q, --quiet                   Suppress verbose output
+```
+
+### 查看
+
+```shell
+Usage:  docker images [OPTIONS] [REPOSITORY[:TAG]]
+
+List images
+
+Options:
+  -a, --all             Show all images (default hides intermediate images)
+      --digests         Show digests
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print images using a Go template
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show image IDs
+```
+
+### 导入
+
+```shell
+Usage:  docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]
+
+Import the contents from a tarball to create a filesystem image
+
+Options:
+  -c, --change list       Apply Dockerfile instruction to the created image
+  -m, --message string    Set commit message for imported image
+      --platform string   Set platform if server is multi-platform capable
+```
+
+### 导出
+
+```shell
+Usage:  docker export [OPTIONS] CONTAINER
+
+Export a container's filesystem as a tar archive
+
+Options:
+  -o, --output string   Write to a file, instead of STDOUT
+```
+
+### 构建
+
+```shell
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Options:
+  -a, --author string    Author (e.g., "John Hannibal Smith
+                         <hannibal@a-team.com>")
+  -c, --change list      Apply Dockerfile instruction to the created image
+  -m, --message string   Commit message
+  -p, --pause            Pause container during commit (default true)
+```
+
+```shell
+sage:  docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+
+Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+```
+
+### Dockerfile
+
+### 删除
+
+```shell
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+
+Options:
+  -f, --force      Force removal of the image
+      --no-prune   Do not delete untagged parents
+```
+
+### 检查
+
+```shell
+Usage:  docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+
+Return low-level information on Docker objects
+
+Options:
+  -f, --format string   Format the output using the given Go template
+  -s, --size            Display total file sizes if the type is container
+      --type string     Return JSON for specified type
+```
+
 ## 容器
+
+### 启动
+
+```shell
+Usage:  docker unpause CONTAINER [CONTAINER...]
+
+Unpause all processes within one or more containers
+```
+
+```shell
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+
+Options:
+  -a, --attach               Attach STDOUT/STDERR and forward signals
+      --detach-keys string   Override the key sequence for detaching a
+                             container
+  -i, --interactive          Attach container's STDIN
+```
+
+### 查看
+
+```shell
+Usage:  docker ps [OPTIONS]
+
+List containers
+
+Options:
+  -a, --all             Show all containers (default shows just running)
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print containers using a Go template
+  -n, --last int        Show n last created containers (includes all
+                        states) (default -1)
+  -l, --latest          Show the latest created container (includes all
+                        states)
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only display container IDs
+  -s, --size            Display total file sizes
+```
+
+### 停止
+
+```shell
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+
+Options:
+  -t, --time int   Seconds to wait for stop before killing it (default 10)
+```
+
+### 暂停
+
+```shell
+Usage:  docker pause CONTAINER [CONTAINER...]
+
+Pause all processes within one or more containers
+```
+
+### 重启
+
+```shell
+Usage:  docker restart [OPTIONS] CONTAINER [CONTAINER...]
+
+Restart one or more containers
+
+Options:
+  -t, --time int   Seconds to wait for stop before killing the container
+```
+
+### 进入
+
+```shell
+Usage:  docker attach [OPTIONS] CONTAINER
+
+Attach local standard input, output, and error streams to a running container
+
+Options:
+      --detach-keys string   Override the key sequence for detaching a
+                             container
+      --no-stdin             Do not attach STDIN
+      --sig-proxy            Proxy all received signals to the process
+                             (default true)
+```
+
+```shell
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Run a command in a running container
+
+Options:
+  -d, --detach               Detached mode: run command in the background
+      --detach-keys string   Override the key sequence for detaching a
+                             container
+  -e, --env list             Set environment variables
+      --env-file list        Read in a file of environment variables
+  -i, --interactive          Keep STDIN open even if not attached
+      --privileged           Give extended privileges to the command
+  -t, --tty                  Allocate a pseudo-TTY
+  -u, --user string          Username or UID (format:
+                             <name|uid>[:<group|gid>])
+  -w, --workdir string       Working directory inside the container
+```
+
+### 删除
+
+```shell
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+
+Options:
+  -f, --force     Force the removal of a running container (uses SIGKILL)
+  -l, --link      Remove the specified link
+  -v, --volumes   Remove anonymous volumes associated with the container
+```
+
+### 复制
+
+```shell
+Usage:  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+        docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+
+Copy files/folders between a container and the local filesystem
+
+Use '-' as the source to read a tar archive from stdin
+and extract it to a directory destination in a container.
+Use '-' as the destination to stream a tar archive of a
+container source to stdout.
+
+Options:
+  -a, --archive       Archive mode (copy all uid/gid information)
+  -L, --follow-link   Always follow symbol link in SRC_PATH
+```
+
 ## 编排
 
 ## 部署
@@ -399,7 +660,7 @@ docker run -di -p 33070:3306 -v v3:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 
 
 ## 数据
 ## 网络
-### docker0网桥
+### docker0
 docker启动的时候会自动在宿主机上创建docker0网桥，之后创建的容器在没有指定网络的情况下会自动连接到该网桥上，如此以来就可以实现容器与主机、容器与容器之间的网络通讯了。
 ![image.png](https://cdn.coder369.com/img/blog/WEBRESOURCEcdc16ede6aa599d1b992aef4009de1ab)
 
@@ -436,12 +697,12 @@ docker exec -it box2 ifconfig
 ![image.png](https://cdn.coder369.com/img/blog/WEBRESOURCEa573c69d674d6afafd50dd5094b15160)
 
 > 以上实验表明，连接到docker0网桥上的容器之间可以实现相互通讯
-#### 原理
+#### 通讯原理
 创建容器的时候，docker会在容器与宿主机之间创建成对的虚拟网卡
 ![image.png](https://cdn.coder369.com/img/blog/WEBRESOURCE7ce7635fe0c51af7e1c010b6dea7de12)
 ![image.png](https://cdn.coder369.com/img/blog/WEBRESOURCE9884959f0645444a6cd177305476eb95)
 
-### 容器连接（link）
+### 容器连通
 link参数可以在创建容器的时候指定要连接的容器名称，这样创建的容器会在容器的/etc/host文件里生成互联容器的ip映射表，这样可以通过容器的名称直接ping到该容器
 
 创建box3容器（link box1）
@@ -453,5 +714,42 @@ box3 ping box1
 
 > 注意，link属性创建的容器，只能单向的通过容器名访问，要实现容器名的双向访问可以通过自定义网络的形式来实现（推荐使用自定义网络）
 ### 自定义网络
+
+```shell
+Usage:  docker network create [OPTIONS] NETWORK
+
+Create a network
+
+Options:
+      --attachable           Enable manual container attachment
+      --aux-address map      Auxiliary IPv4 or IPv6 addresses used by        
+                             Network driver (default map[])
+      --config-from string   The network from which to copy the configuration
+      --config-only          Create a configuration only network
+  -d, --driver string        Driver to manage the Network (default "bridge") 
+      --gateway strings      IPv4 or IPv6 Gateway for the master subnet      
+      --ingress              Create swarm routing-mesh network
+      --internal             Restrict external access to the network
+      --ip-range strings     Allocate container ip from a sub-range
+      --ipam-driver string   IP Address Management Driver (default "default")
+      --ipam-opt map         Set IPAM driver specific options (default map[])
+      --ipv6                 Enable IPv6 networking
+      --label list           Set metadata on a network
+  -o, --opt map              Set driver specific options (default map[])     
+      --scope string         Control the network's scope
+      --subnet strings       Subnet in CIDR format that represents a
+                             network segment
+```
+
+创建自定义子网
+
+```shell
+docker network create --subnet 192.168.0.0/16 --gateway 192.168.0.1 -d bridge diy-net
+```
+
+> 注：自定义的子网，连接在该子网上的容器之间可以通过容器名相互ping通
+
+## Swarm
+
 ## 安全
 
