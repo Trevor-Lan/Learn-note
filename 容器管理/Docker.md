@@ -23,7 +23,8 @@ sudo yum install -y docker-ce-20.10.7 docker-ce-cli-20.10.7 containerd.io-1.4.6
 systemctl enable docker
 systemctl start docker
 ```
-docker加速配置
+### 加速
+
 ```
 cat > /etc/docker/daemon.json << EOF
 {
@@ -37,13 +38,24 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 ## 架构
+
+
+
 ## 仓库
 
 ### Docker官方
 
+https://hub.docker.com
+
 ### Harbor
 
+https://goharbor.io
+
 ### 云服务仓库
+
+阿里云容器服务
+
+腾讯云容器服务
 
 ## 镜像
 
@@ -139,7 +151,22 @@ Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
 
 ### Dockerfile
 
-
+```
+FROM
+MAINTAINER
+RUN
+CMD
+VOLUME
+USER
+LABEL
+WORKDIR
+ARG
+EXPOSE
+ENV
+ADD
+COPY
+ENTYPOINT
+```
 
 ### 删除
 
@@ -206,6 +233,27 @@ Options:
       --no-trunc        Don't truncate output
   -q, --quiet           Only display container IDs
   -s, --size            Display total file sizes
+```
+
+### 日志
+
+```shell
+Usage:  docker logs [OPTIONS] CONTAINER
+
+Fetch the logs of a container
+
+Options:
+      --details        Show extra details provided to logs
+  -f, --follow         Follow log output
+      --since string   Show logs since timestamp (e.g.
+                       2013-01-02T13:23:37Z) or relative (e.g. 42m for 42
+                       minutes)
+  -n, --tail string    Number of lines to show from the end of the logs
+                       (default "all")
+  -t, --timestamps     Show timestamps
+      --until string   Show logs before a timestamp (e.g.
+                       2013-01-02T13:23:37Z) or relative (e.g. 42m for 42
+                       minutes)
 ```
 
 ### 停止
@@ -305,9 +353,21 @@ Options:
 
 ## 编排
 
+### Swarm
+
+### Mesos
+
+### Kubernetes
+
 ## 部署
 
-### Filebrowser
+### docker compose
+
+### docker stack
+
+### 应用部署
+
+#### Filebrowser
 
 docker:https://hub.docker.com/r/filebrowser/filebrowser
 
@@ -328,7 +388,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### GitLab
+#### GitLab
 
 docker:https://hub.docker.com/r/gitlab/gitlab-ce
 
@@ -350,7 +410,7 @@ networks:
     name: nginx-proxy_default
 ```
 
-### MySQL
+#### MySQL
 
 docker:https://hub.docker.com/_/mysql
 
@@ -373,7 +433,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Netdata
+#### Netdata
 
 docker:https://hub.docker.com/r/netdata/netdata
 
@@ -403,7 +463,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Nginx-Proxy
+#### Nginx-Proxy
 
 docker:https://hub.docker.com/r/jc21/nginx-proxy-manager
 
@@ -437,7 +497,7 @@ services:
       - /server/nginx-proxy/mariadb:/var/lib/mysql
 ```
 
-### phpMyAdmin
+#### phpMyAdmin
 
 docker:https://hub.docker.com/_/phpmyadmin
 
@@ -458,7 +518,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Rabbitmq
+#### Rabbitmq
 
 docker:https://hub.docker.com/_/rabbitmq
 
@@ -480,7 +540,7 @@ networks:
     name: nginx-proxy_default
 ```
 
-### Redis
+#### Redis
 
 docker:https://hub.docker.com/_/redis
 
@@ -501,7 +561,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Redmine
+#### Redmine
 
 docker:https://hub.docker.com/_/redmine
 
@@ -543,7 +603,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Nginx
+#### Nginx
 
 docker:https://hub.docker.com/_/nginx
 
@@ -564,7 +624,7 @@ networks:
     name: nginx-proxy_default
 ```
 
-### Vaultwarden
+#### Vaultwarden
 
 docker：https://hub.docker.com/r/vaultwarden/server
 
@@ -589,7 +649,7 @@ networks:
     name: nginx-proxy_default 
 ```
 
-### Replication集群
+#### Replication集群
 
 下载镜像
 
@@ -625,7 +685,7 @@ docker run -d -p 3307:3306  \
   mishamx/mysql:5.7
 ```
 
-### PXC集群
+#### PXC集群
 
 创建数据卷
 
@@ -661,6 +721,26 @@ docker run -di -p 33070:3306 -v v3:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 
 ```
 
 ## 数据
+
+### 数据卷
+
+```shell
+Usage:  docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes    
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+```
+
+### 目录挂载
+
+### 数据卷容器
+
 ## 网络
 ### docker0
 docker启动的时候会自动在宿主机上创建docker0网桥，之后创建的容器在没有指定网络的情况下会自动连接到该网桥上，如此以来就可以实现容器与主机、容器与容器之间的网络通讯了。
@@ -750,8 +830,6 @@ docker network create --subnet 192.168.0.0/16 --gateway 192.168.0.1 -d bridge di
 ```
 
 > 注：自定义的子网，连接在该子网上的容器之间可以通过容器名相互ping通
-
-## Swarm
 
 ## 安全
 
