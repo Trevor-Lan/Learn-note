@@ -54,3 +54,4 @@ swapoff -a
 sed -ri 's/.*swap.*/#&/' /etc/fstab
 ```
 
+## 架构
